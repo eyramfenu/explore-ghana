@@ -1,0 +1,51 @@
+/* Shared stylesheet: every HTML page links to this file. */
+* { box-sizing: border-box; }
+body { margin: 0; background: #f8f5ed; color: #193c34; font-family: Arial, sans-serif; line-height: 1.65; }
+a { color: #236048; }
+a:hover { color: #9a401b; }
+header, main, footer { max-width: 1180px; margin: auto; padding: 0 32px; }
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 26px; padding-bottom: 26px; border-bottom: 1px solid #d7ddd0; }
+.brand { font-size: 1.7rem; font-weight: bold; text-decoration: none; letter-spacing: -1px; }
+.brand span { color: #a84620; }
+nav { display: flex; flex-wrap: wrap; gap: 24px; }
+nav a { text-decoration: none; font-size: 0.9rem; padding: 8px 0; }
+nav a[aria-current="page"] { border-bottom: 2px solid #a84620; font-weight: bold; }
+h1,h2,h3 { line-height: 1.12; }
+h1 { font-family: Georgia, serif; font-size: 3.8rem; font-weight: normal; margin: 18px 0; letter-spacing: -2px; }
+h2 { font-family: Georgia, serif; font-size: 2.2rem; font-weight: normal; }
+h3 { font-size: 1.2rem; }
+.eyebrow { font-size: 0.75rem; font-weight: bold; letter-spacing: 2px; color: #a84620; }
+.hero { display: flex; align-items: center; gap: 40px; padding: 60px 0; }
+.hero > div { flex: 1; }
+.hero img { width: 48%; height: auto; border-radius: 100px 100px 10px 10px; }
+.hero p { max-width: 450px; }
+.button { display: inline-block; border: 0; background: #234e3e; color: white; padding: 14px 22px; border-radius: 5px; text-decoration: none; font: inherit; cursor: pointer; margin-top: 12px; }
+.button:hover { background: #a84620; color: white; }
+section { margin-bottom: 55px; }
+.cards { display: flex; flex-wrap: wrap; gap: 22px; }
+.card { flex: 1 1 240px; padding: 28px; background: #fffdf8; border: 1px solid #dddccc; border-top: 4px solid #bb773b; border-radius: 8px; }
+.card p { color: #4b6257; }
+.number { font-family: Georgia, serif; font-size: 2rem; color: #a84620; }
+.banner { background: #dfebdf; padding: 36px; border-radius: 10px; margin-bottom: 60px; }
+.banner h2 { margin-top: 0; }
+.page-intro { padding-top: 50px; max-width: 800px; }
+.split { display: flex; gap: 40px; align-items: flex-start; }
+.split > * { flex: 1; min-width: 0; }
+.panel,.note { padding: 28px; border-radius: 8px; background: #fffdf8; border: 1px solid #d7ddd0; }
+.note { background: #e8ecdd; }
+label { display: block; font-weight: bold; margin: 18px 0 6px; }
+input,select,textarea { width: 100%; padding: 12px; border: 1px solid #8d9c90; border-radius: 4px; font: inherit; background: white; color: #193c34; }
+.result { padding: 18px; background: #dfebdf; font-weight: bold; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; background: #fffdf8; }
+caption { text-align: left; padding-bottom: 14px; }
+th,td { text-align: left; padding: 16px; border-bottom: 1px solid #d7ddd0; }
+thead { background: #234e3e; color: white; }
+details { padding: 16px 0; border-bottom: 1px solid #d7ddd0; }
+summary { font-weight: bold; cursor: pointer; }
+footer { border-top: 1px solid #d7ddd0; padding-top: 24px; padding-bottom: 32px; font-size: 0.85rem; }
+:focus-visible { outline: 3px solid #a84620; outline-offset: 4px; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 12px; top: 12px; background: white; padding: 12px; }
+/* A narrower screen stacks the two-column sections. */
+@media (max-width: 760px) { header,main,footer { padding-left: 20px; padding-right: 20px; } nav { gap: 16px; } h1 { font-size: 2.7rem; } .hero,.split { flex-direction: column; } .hero img { width: 100%; } .hero { padding: 36px 0; } .split > * { width: 100%; } }
